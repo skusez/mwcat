@@ -60,7 +60,7 @@ export default function Home() {
   }
 
   // Renderer callback with condition
-  const renderer = ({ days, hours, minutes, seconds, completed }) => {
+  /*const renderer = ({ days, hours, minutes, seconds, completed }) => {
     if (completed) {
       // Render a completed state
       return <div className={styles.main_mint_box}>
@@ -96,7 +96,7 @@ export default function Home() {
         </>
       )
     }
-  };
+  };*/
 
     const requestAccountMetamask = async() => {
       const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
@@ -229,10 +229,10 @@ export default function Home() {
       </nav>
       
         <img className={styles.himg} src='/Rectangle.png'/>
-       
+        
         <div className={styles.main_mint}>          
-          <Countdown date={1643030580000} renderer={renderer}/>
-        </div>
+        {/* <Countdown date={1643030580000} renderer={renderer}/>*/}
+        </div> 
 
         <div className={styles.main}>
           <div className={styles.main_wrapper}>
@@ -272,7 +272,7 @@ export default function Home() {
             <div className={styles.team_item}>
               <img src='/skuse.jpg'/>
               <h3>@SkuseTheMoonwalker</h3>
-              <p>Co-Founder & Marketing</p>
+              <p>Co-Founder & Tech Lead</p>
               <SocialIcon url="https://www.linkedin.com/in/jordan-skuse-013005138/" style={{ height: 25, width: 25 }} />
               {' '}<SocialIcon url="https://twitter.com/SkuseNFT" style={{ height: 25, width: 25 }} />
             </div>
@@ -287,7 +287,7 @@ export default function Home() {
             <div className={styles.team_item}>
               <img src='/Variation 9.jpg'/>
               <h3>@NicoC</h3>
-              <p>Tech Lead</p>
+              <p>Developer</p>
             </div>
             <div className={styles.team_item}>
               <img src='/Variation 10.jpg'/>
