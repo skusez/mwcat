@@ -23,6 +23,7 @@ import Countdown from 'react-countdown';
 import ContractData from '../config/Contract.json';
 const Web3 = require('web3');
 import detectEthereumProvider from '@metamask/detect-provider'
+import { Spacer, Text } from '@chakra-ui/react'
 
 export default function Home() {
   const [menu, setMenu] = useState(true)
@@ -231,20 +232,24 @@ export default function Home() {
         <img className={styles.himg} src='/Rectangle.png'/>
         
         <div className={styles.main_mint}>          
-        { <Countdown date={1650286800000} renderer={renderer}/>}
+        { <Countdown date={1650319200000} renderer={renderer}/>}
         </div> 
 
         <div className={styles.main}>
           <div className={styles.main_wrapper}>
-            <h1>What is MoonwalkerFM</h1>
-            <p>Lo-Fi Moonwalkers is the first NFT collection from MoonwalkerFM connecting Artists & Investors in a way never seen before. <br/>For the first time fans can be a part of the success of a song that they love in real time. </p>
+            <h2>What is MoonwalkerFM?</h2>
+            <p> When you mint a MoonwalkerFM NFT, you own up to 30<span style={{fontFamily:'Inter'}}>%</span>* streaming royalties on a 100<span style={{fontFamily:'Inter'}}>%</span> original LoFi track. That means every time your song is played, you are earning passive rewards that are airdropped directly to you every quarter. 
+ <br/><Text as={'i'} fontSize={'0.7em'}>*2 NFTs are connected per song, sharing 45<span style={{fontFamily:'Inter'}}>%</span> between them. One owns 30<span style={{fontFamily:'Inter'}}>%</span>, the other 15<span style={{fontFamily:'Inter'}}>%</span> based on which is rarer</Text>
+</p>
             <br/>
-            <p>Every NFT minted gets paired with a full-length Lo-Fi song from streaming platforms, as the seasons roll out. The NFT holders of these songs can take home up to 45 <span style={{fontFamily:'Inter'}}>%</span> of the value of streaming profits in the form of rewards.</p>
+            <h2>How do I know which song is mine?</h2>
+            <p>MoonwalkerFM created an industry-first decentralised application (DApp) that shows you which songs your NFTs are linked with and if it's rare or common. All you need is your Ethereum wallet address!</p>
+<Text as={'a'} cursor={'pointer'} onClick={() => window.open('https://dapp.moonwalker.fm')}>Open The Dapp</Text>
           </div>
           <img src={`/gif.gif`}/>
         </div>
         <div className={styles.about}>
-          <p><b>But what are Moonwalkers?</b> <br/><br/>By nature they were an angry & unpleasant species. Fur-covered aliens from a distant galaxy. Always discontent & unsatisfied with their way of living… one day, a Millenia ago, an ancient tape was discovered. This tape contained a series of audio files which brought peace & serenity to the Moonwalkers. they called this music. Lo-Fi. This inspired them to work together to explore the universe to discover new music, to keep their world safe & to never return to the days of old...</p>
+          <p><b>But who are the Moonwalkers?</b> <br/><br/>By nature they were an angry & unpleasant species. Fur-covered aliens from a distant galaxy. Always discontent & unsatisfied with their way of living… one day, a Millenia ago, an ancient tape was discovered. This tape contained a series of audio files which brought peace & serenity to the Moonwalkers. they called this music. Lo-Fi. This inspired them to work together to explore the universe to discover new music, to keep their world safe & to never return to the days of old...</p>
           <img src='/Utility Page (Remodified).svg'/>
         </div>
 

@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../../styles/Home.module.scss'
+import { Text } from '@chakra-ui/react';
 import React, {useRef,  useState, useEffect } from 'react';
 import { SocialIcon } from 'react-social-icons';
 import { Fade } from "react-awesome-reveal";
@@ -231,7 +232,7 @@ export default function Home() {
       <img className={styles.benefit} src='/camsecret.png'/>
         <div className={styles.main_mint}>
           <h1>EXCLUSIVE ACCESS</h1>
-          <p className={styles.main_mint_p}>You've been selected<br/>Less than 1000 Gen-0 NFT's Left <br/><b>each cost</b> 0.06 ETH</p>
+          <p className={styles.main_mint_p}>You've been selected<br/>Only {remainingNFTs} Gen-0 NFT's Left <br/><b>each cost</b> 0.06 ETH</p>
           
             <Countdown date={1634645247000} renderer={renderer}/>
         </div>
@@ -242,7 +243,7 @@ export default function Home() {
           <b>MoonwalkerFM</b> is the first NFT based record label of its kind offering passive rewards to holders with a unique seasonal rollout, delivering <b>high quality 1:1 Lo-Fi songs</b> from established & up & coming artists.
           We drop music in seasons of 50 tracks.</p>
           <h3>Our first season launched January 7th, 2022.</h3>
-          <p> 100 Holders get associated with the 50 songs. This can be identified by the album cover art and minting number + a dapp that we are building (for next season).
+          <p> 100 Holders get associated with the 50 songs. This can be identified on our <Text decoration={'underline'} cursor={'pointer'} onClick={() => window.open('https://dapp.moonwalker.fm')}>dapp.</Text>
           The holders of these NFTs can <b>claim rewards quarterly</b>, this comes in the form of NFTs and ETH.
           But most importantly, it is a platform for artists to shine & get the type of deal they deserve.<br/><br/>Our background is in the music industry.
           <br/><br/></p>
