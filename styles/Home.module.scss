@@ -37,8 +37,12 @@
 .cd{
     all:inherit;
     border:10px solid #fefea2;
-    color:white;
-    background:#328fbd;
+    color:black;
+    background: rgba(235,210,81, 0.5);
+    background: linear-gradient(90deg, 
+    rgba(235,210,81,0.8) 0%,
+    rgba(165,228,216,0.8) 36%,
+    rgba(169,192,254,0.8) 100%);
     text-align:center;
     width:100%;
     padding:1em;
@@ -186,11 +190,11 @@ margin-right: 0;
 
 .main_subscribe{
     border:10px solid #fefea2;
-    color:white;
-    background: rgb(235,210,81);
-    background: linear-gradient(90deg, rgba(235,210,81,1) 0%,
-                                     rgba(165,228,216,0.9164040616246498) 36%,
-                                     rgba(169,192,254,1) 100%);
+    color:black;
+    background: rgba(235,210,81, 0.5);
+    background: linear-gradient(90deg, rgba(235,210,81,0.8) 0%,
+                                     rgba(165,228,216,0.8) 36%,
+                                     rgba(169,192,254,0.8) 100%);
     text-align:center;
     font-family: 'Mont Heavy';
     position:relative;

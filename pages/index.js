@@ -60,12 +60,12 @@ export default function Home() {
   }
 
   // Renderer callback with condition
-  /*const renderer = ({ days, hours, minutes, seconds, completed }) => {
+  const renderer = ({ days, hours, minutes, seconds, completed }) => {
     if (completed) {
       // Render a completed state
       return <div className={styles.main_mint_box}>
         <h1>MINT GENERATION ZERO</h1>
-          <p className={styles.main_mint_p}>Limited supply remaining!
+          <p className={styles.main_mint_p}>{remainingNFTs} NFTs remaining!
           <br/>Total of 1500 GEN-0 Moonwalker NFTs.<br/>
           <b></b> 0.06 ETH </p>
             <div>
@@ -85,7 +85,7 @@ export default function Home() {
       // Render a countdown
       return (
         <>
-          <div className={styles.cd}>PUBLIC SALE <br/> JANUARY 24TH 9AM EST<br/> {days} days {hours}:{minutes}:{seconds}</div>
+          <div className={styles.cd}>SEASON ONE PUBLIC SALE <br/>Mint 5 NFTs and get 0.06ETH back!<br/> {days} day {hours}hrs {minutes}mins {seconds}s</div>
           <div className={styles.main_subscribe}>
             <p>Sign up for the public sale</p><br/>
             Register now to get exclusive access for the upcoming public sale!
@@ -96,7 +96,7 @@ export default function Home() {
         </>
       )
     }
-  };*/
+  };
 
     const requestAccountMetamask = async() => {
       const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
@@ -231,7 +231,7 @@ export default function Home() {
         <img className={styles.himg} src='/Rectangle.png'/>
         
         <div className={styles.main_mint}>          
-        {/* <Countdown date={1643030580000} renderer={renderer}/>*/}
+        { <Countdown date={1650286800000} renderer={renderer}/>}
         </div> 
 
         <div className={styles.main}>

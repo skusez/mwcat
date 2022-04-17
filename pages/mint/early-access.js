@@ -52,19 +52,23 @@ export default function Home() {
     const contract = new web3.eth.Contract(ContractData.abi, ContractData.address);
 
 
-      const maxSupply = await contract.methods.maxSupply().call();
+      const maxSupply = 1500;
       const totalSupply = await contract.methods.totalSupply().call();
       setRemainingNFTs(maxSupply - totalSupply);
   }
+  const mintEnabled = true;
+  const payable = (0.06 * mintAmount).toFixed(2);
   // Renderer callback with condition
   const renderer = ({ days, hours, minutes, seconds, completed }) => {
-    if (completed) {
+    if (mintEnabled == false) { return ('') }
+    else if (completed) {
       // Render a completed state
       return <div className={styles.main_mint_box}>
       <h1>EXCLUSIVE ACCESS</h1>
-        <p className={styles.main_mint_p}>Limited supply remaining!
-        <br/>Total of 1500 GEN-0 Moonwalker NFTs.<br/>
-        <b></b> 0.06 ETH </p>
+        <p className={styles.main_mint_p}>{remainingNFTs} Moonwalkers Remaining!
+        <br/>Mint 5 & Get Airdropped 0.06 ETH<br/>
+        <b> {payable} ether</b>
+        </p>
           <div>
             <p className={styles.main_mint_s} onClick={() => { 
               setMintAmount(mintAmount == 10 ? 10 : mintAmount+1) ;
@@ -72,7 +76,7 @@ export default function Home() {
             }}>+</p>
             <input className={styles.main_mint_input} type="text" value={`${mintAmount}`}/>
             <p className={styles.main_mint_s} onClick={() => { 
-              setMintAmount(mintAmount == 0 ? 0 : mintAmount-1) ;
+              setMintAmount(mintAmount == 1 ? 1 : mintAmount-1) ;
 
             }}>-</p>
           </div>
