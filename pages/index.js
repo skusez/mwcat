@@ -57,7 +57,7 @@ export default function Home() {
 
       const maxSupply = await contract.methods.maxSupply().call();
       const totalSupply = await contract.methods.totalSupply().call();
-      setRemainingNFTs(maxSupply - totalSupply);
+      setRemainingNFTs(1500 - totalSupply);
   }
 
   // Renderer callback with condition
